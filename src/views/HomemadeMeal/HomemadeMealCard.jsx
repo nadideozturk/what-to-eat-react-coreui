@@ -3,8 +3,7 @@ import { Badge, Card, CardBody, CardFooter, CardHeader, Col, Row, Collapse, Fade
 import { AppSwitch } from '@coreui/react';
 
 type Props = {
-  title: string,
-  body: string,
+  meal: any,
 }
 
 export default class HomemadeMealCard extends Component<Props> {
@@ -13,10 +12,10 @@ export default class HomemadeMealCard extends Component<Props> {
     return (
       <Card>
         <CardHeader>
-          {this.props.title}
+          {this.props.meal.name}
         </CardHeader>
         <CardBody>
-          {this.props.body}
+          <img src={this.props.meal.photoUrl} style={{'width':'100%'}}/>
         </CardBody>
       </Card>
     );
