@@ -13,9 +13,14 @@ export default class HomemadeMealCard extends Component<Props> {
       <Card>
         <CardHeader>
           {this.props.meal.name}
+          <div className="card-header-actions">
+            <p className="float-right">
+              {this.props.meal.durationInMinutes} min
+            </p>
+          </div>
         </CardHeader>
         <CardBody>
-          <img src={this.props.meal.photoUrl} style={{'width':'100%'}}/>
+          <img src={this.props.meal.photoUrl} class = "img-fluid" style ={{height:'auto'}}/>
         </CardBody>
       </Card>
     );
