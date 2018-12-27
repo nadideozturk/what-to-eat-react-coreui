@@ -10,19 +10,14 @@ export default class OutsideMealCard extends Component<Props> {
 
   render() {
     return (
-      <Card>
-        <CardHeader>
-          {this.props.meal.name} at {this.props.meal.restaurantName}
-          <div className="card-header-actions">
-            <p className="float-right">
-              {this.props.meal.price} min
-            </p>
-          </div>
-        </CardHeader>
-        <CardBody>
-          <img src={this.props.meal.photoUrl} class = "img-fluid" style ={{height:'auto'}}/>
-        </CardBody>
-      </Card>
+      <div className="card" style={{'width': '20rem'}}>
+        <img className="card-img-top" src={this.props.meal.photoUrl} alt="Card image cap" />
+        <div className="card-body">
+          <h6 className="card-title"> {this.props.meal.name}
+            <p className="float-right"> {this.props.meal.price} CAD </p>
+          </h6>
+        </div>
+      </div>
     );
   }
 }
