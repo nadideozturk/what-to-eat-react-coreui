@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Badge, Card, CardBody, CardFooter, CardHeader, Col, Row, Collapse, Fade } from 'reactstrap';
-import { AppSwitch } from '@coreui/react'
+import { AppSwitch } from '@coreui/react';
+import GoogleLogin from 'react-google-login';
 import HomemadeMealCard from './HomemadeMealCard';
 
 const mockData =
@@ -85,6 +86,10 @@ const mockData =
     }
 ]
 
+const responseGoogle = (response) => {
+  console.log(response);
+  localStorage.setItem('id_token', response.tokenObj.id_token);
+}
 
 class HomemadeMeal extends Component {
   constructor(props) {
@@ -110,6 +115,13 @@ class HomemadeMeal extends Component {
   render() {
     return (
       <div className="animated fadeIn">
+        {localStorage.getItem('id_token') ? "" : <GoogleLogin
+          clientId="8792279534-hju50uid2ncs1r32n2kct2jlbjge4rq9.apps.googleusercontent.com"
+          buttonText="Login"
+          onSuccess={responseGoogle}
+          onFailure={responseGoogle}
+        /> }
+
         <Row>
           {mockData.map(meal =>
             <Col xs="12" sm="6" md="4" key={meal.id}>
