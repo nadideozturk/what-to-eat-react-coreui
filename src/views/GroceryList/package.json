@@ -1,0 +1,6 @@
+{
+  "name": "GroceryList",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./GroceryList.jsx"
+}

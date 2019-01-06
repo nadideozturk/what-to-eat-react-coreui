@@ -1,0 +1,6 @@
+{
+  "name": "HomemadeMealDetail",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./HomemadeMealDetail.jsx"
+}

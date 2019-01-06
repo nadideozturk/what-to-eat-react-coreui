@@ -3,6 +3,12 @@ import DefaultLayout from './containers/DefaultLayout';
 
 const HomemadeMeal = React.lazy(() => import('./views/HomemadeMeal'));
 const OutsideMeal = React.lazy(() => import('./views/OutsideMeal'));
+const HomemadeMealDetail = React.lazy(() => import('./views/HomemadeMealDetail'));
+const OutsideMealDetail = React.lazy(() => import('./views/OutsideMealDetail'));
+const Plan = React.lazy(() => import('./views/Plan'));
+const Explore = React.lazy(() => import('./views/Explore'));
+const GroceryList = React.lazy(() => import('./views/GroceryList'));
+const TodaysIdea = React.lazy(() => import('./views/TodaysIdea'));
 const Breadcrumbs = React.lazy(() => import('./views/Base/Breadcrumbs'));
 const Cards = React.lazy(() => import('./views/Base/Cards'));
 const Carousels = React.lazy(() => import('./views/Base/Carousels'));
@@ -44,8 +50,14 @@ const routes = [
   { path: '/', exact: true, name: 'Home', component: DefaultLayout },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/theme', exact: true, name: 'Theme', component: Colors },
-  { path: '/homemademeal', name: 'Homemade Meal', component: HomemadeMeal },
+  { path: '/homemademeal', exact: true, name: 'Homemade Meal', component: HomemadeMeal },
+  { path: '/homemademeal/:id', name: 'Homemade Meal Detail', component: HomemadeMealDetail },
+  { path: '/outsidemeal/:id', name: 'Outside Meal Detail', component: OutsideMealDetail },
   { path: '/outsidemeal', name: 'Outside Meal', component: OutsideMeal },
+  { path: '/plan', name: 'Plan', component: Plan },
+  { path: '/explore', name: 'Explore', component: Explore },
+  { path: '/grocerylist', name: 'Grocery List', component: GroceryList },
+  { path: '/todaysidea', name: 'Todays Idea', component: TodaysIdea },
   { path: '/base', exact: true, name: 'Base', component: Cards },
   { path: '/base/cards', name: 'Cards', component: Cards },
   { path: '/base/forms', name: 'Forms', component: Forms },

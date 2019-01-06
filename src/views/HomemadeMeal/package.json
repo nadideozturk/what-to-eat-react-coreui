@@ -2,5 +2,5 @@
   "name": "HomemadeMeal",
   "version": "0.0.0",
   "private": true,
-  "main": "./HomemadeMeal.js"
+  "main": "./HomemadeMeal.jsx"
 }

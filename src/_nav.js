@@ -19,5 +19,25 @@ export default {
       url: '/outsidemeal',
       icon: 'icon-pencil',
     },
+    {
+      name: 'Plan',
+      url: '/plan',
+      icon: 'icon-pencil',
+    },
+    {
+      name: 'Grocery List',
+      url: '/grocerylist',
+      icon: 'icon-pencil',
+    },
+    {
+      name: 'Explore',
+      url: '/explore',
+      icon: 'icon-pencil',
+    },
+    {
+      name: 'Todays Idea',
+      url: '/todaysidea',
+      icon: 'icon-pencil',
+    },
   ],
 };
